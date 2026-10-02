@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/mock?route=:path*"
+    }
+  ],
+  "functions": {
+    "api/mock.js": {
+      "maxDuration": 10
+    }
+  }
+}
